@@ -52,11 +52,11 @@
 #define DigitalInputN6Pin 6 // Digital Input Negative 6
 #define DigitalInputN7Pin 7 // Digital Input Negative 7
 
-#define DigitalInputP0Pin 8  // Digital Input Negative 0
-#define DigitalInputP1Pin 9  // Digital Input Negative 1
-#define DigitalInputP2Pin 10 // Digital Input Negative 2
-#define DigitalInputP3Pin 11 // Digital Input Negative 3
-#define DigitalInputP4Pin 12 // Digital Input Negative 4
-#define DigitalInputP5Pin 13 // Digital Input Negative 5
-#define DigitalInputP6Pin 14 // Digital Input Negative 6
-#define DigitalInputP7Pin 15 // Digital Input Negative 7
+#define DigitalInputP0Pin 8  // Digital Input Positive 0
+#define DigitalInputP1Pin 9  // Digital Input Positive 1
+#define DigitalInputP2Pin 10 // Digital Input Positive 2
+#define DigitalInputP3Pin 11 // Digital Input Positive 3
+#define DigitalInputP4Pin 12 // Digital Input Positive 4
+#define DigitalInputP5Pin 13 // Digital Input Positive 5
+#define DigitalInputP6Pin 14 // Digital Input Positive 6
+#define DigitalInputP7Pin 15 // Digital Input Positive 7
