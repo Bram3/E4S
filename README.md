@@ -49,6 +49,11 @@ Segment7 segment7 = Segment7(serout);
 segment7.number(9, 1);
 segment7.clear();
 
+// Rgb 
+Rgb rgb = Rgb(serout);
+rgb.red();
+rgb.blue();
+rgb.green();
 
 ```
 
