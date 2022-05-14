@@ -7,3 +7,4 @@
 #include <DigitalIn.h>
 #include <Button.h>
 #include <Segment7.h>
+#include <Rgb.h>
