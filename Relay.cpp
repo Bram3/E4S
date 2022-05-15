@@ -36,6 +36,11 @@ void Relay::toggle()
     update();
 }
 
+bool Relay::isOn()
+{
+    return serout[(unsigned int)pin];
+}
+
 void Relay::update()
 {
     digitalWrite(ShiftRegStrbPin, LOW);
