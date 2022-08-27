@@ -1,8 +1,8 @@
 #pragma once
-#include <Output.h>
+
 #include <ShiftRegister.h>
 
-class Relay : public Output {
+class Relay {
   ShiftRegister &mShiftRegister;
   int mPin;
 
