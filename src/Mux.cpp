@@ -1,6 +1,4 @@
-#include <Arduino.h>
 #include <Mux.h>
-#include <Pins.h>
 
 Mux::Mux() {
   pinMode(MuxA0Pin, OUTPUT);

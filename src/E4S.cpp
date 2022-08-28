@@ -1,9 +1,4 @@
-#include <Button.h>
-#include <DigitalInput.h>
 #include <E4S.h>
-#include <Relay.h>
-#include <Rgb.h>
-#include <ShiftRegister.h>
 
 E4S::E4S()
     : mShiftRegister(ShiftRegister()), mMux(Mux()),
@@ -32,4 +27,5 @@ E4S::E4S()
       led(SimpleOutput(2)), digitalDirectOutput1(SimpleOutput(16)),
       digitalDirectOutput2(SimpleOutput(17)),
       digitalDirectOutput3(SimpleOutput(18)),
-      digitalDirectOutput4(SimpleOutput(19)), temperature(Generic_LM75(0x48)) {}
+      digitalDirectOutput4(SimpleOutput(19)), temperature(Generic_LM75(0x48)),
+      lcd(LiquidCrystal_I2C(0x27, 20, 4)), buzzer(Buzzer(12)) {}

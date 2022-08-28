@@ -1,10 +1,6 @@
 #include <Button.h>
 
-Button::Button(int pin) {
-  this->mPin = pin;
-  this->mLastReading = 0;
-  pinMode(this->mPin, INPUT);
-}
+Button::Button(int pin) : mPin(pin) { pinMode(this->mPin, INPUT); }
 
 void Button::updateReading() {
 
@@ -13,7 +9,7 @@ void Button::updateReading() {
   if (newReading != this->mLastReading) {
     this->mLastDebounceTime = millis();
   }
-  if (millis() - this->mLastDebounceTime > this->mDebounceDelay) {
+  if (millis() - this->mLastDebounceTime > DEBOUNCE_DELAY) {
     this->mState = newReading;
   }
   this->mLastReading = newReading;

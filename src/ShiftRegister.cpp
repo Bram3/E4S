@@ -1,5 +1,3 @@
-#include <Arduino.h>
-#include <Pins.h>
 #include <ShiftRegister.h>
 
 ShiftRegister::ShiftRegister() {

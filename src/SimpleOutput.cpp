@@ -1,4 +1,3 @@
-#include <Arduino.h>
 #include <SimpleOutput.h>
 
 SimpleOutput::SimpleOutput(int pin) : mPin(pin) { pinMode(this->mPin, OUTPUT); }

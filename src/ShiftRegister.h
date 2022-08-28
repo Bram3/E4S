@@ -1,5 +1,8 @@
 #pragma once
 
+#include <Arduino.h>
+#include <Pins.h>
+
 class ShiftRegister {
   bool mOutputs[24];
   void update();

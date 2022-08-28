@@ -1,5 +1,7 @@
 #pragma once
 
+#define DEBOUNCE_DELAY 50
+
 #include <Arduino.h>
 
 class Button {
@@ -7,9 +9,8 @@ class Button {
 private:
   int mPin;
   int mState;
-  int mLastReading;
+  int mLastReading = 0;
   unsigned long mLastDebounceTime = 0;
-  unsigned long mDebounceDelay = 50;
   void updateReading();
 
 public:

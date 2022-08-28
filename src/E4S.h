@@ -1,8 +1,9 @@
 #pragma once
 
 #include <Button.h>
+#include <Buzzer.h>
 #include <DigitalInput.h>
-#include <LiquidCrystal_I2C.h>
+#include <Lcd.h>
 #include <Mux.h>
 #include <Relay.h>
 #include <Rgb.h>
@@ -61,5 +62,9 @@ public:
   SimpleOutput digitalDirectOutput3;
   SimpleOutput digitalDirectOutput4;
 
+  Buzzer buzzer;
+
   Generic_LM75 temperature;
+
+  LiquidCrystal_I2C lcd;
 };

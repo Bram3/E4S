@@ -33,15 +33,15 @@
 #define Relay7Pin 17 // Relay 7
 #define Relay8Pin 16 // Relay 8
 
-#define DigitalDirectInput0Pin 32 // Digital Direct Input 0
-#define DigitalDirectInput1Pin 33 // Digital Direct Input 1
-#define DigitalDirectInput2Pin 25 // Digital Direct Input 2
-#define DigitalDirectInput3Pin 27 // Digital Direct Input 3
+#define DirectDigitalInput0Pin 32 // Direct Digital Input 0
+#define DirectDigitalInput1Pin 33 // Direct Digital Input 1
+#define DirectDigitalInput2Pin 25 // Direct Digital Input 2
+#define DirectDigitalInput3Pin 27 // Direct Digital Input 3
 
-#define DigitalDirectOutput0Pin 16 // Digital Direct Output 0
-#define DigitalDirectOutput1Pin 17 // Digital Direct Output 1
-#define DigitalDirectOutput2Pin 18 // Digital Direct Output 2
-#define DigitalDirectOutput3Pin 19 // Digital Direct Output 3
+#define DirectDigitalOutput0Pin 16 // Direct Digital Output 0
+#define DirectDigitalOutput1Pin 17 // Direct Digital Output 1
+#define DirectDigitalOutput2Pin 18 // Direct Digital Output 2
+#define DirectDigitalOutput3Pin 19 // Direct Digital Output 3
 
 #define DigitalInputN0Pin 0 // Digital Input Negative 0
 #define DigitalInputN1Pin 1 // Digital Input Negative 1

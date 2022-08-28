@@ -1,4 +1,3 @@
-#include <Arduino.h>
 #include <Segment7.h>
 
 Segment7::Segment7(ShiftRegister &shiftRegister)
