@@ -15,45 +15,52 @@
 - Select the .ZIP
 
 3. PlatformIO:
-
-- Place the .ZIP in the lib folder of your project
+- Extract the .ZIP in the lib folder of your project
 
 ## Example Usage
 
 ```cpp
 #include <E4S.h>
 
-// Use this for all the components that use the shift register
-bool serout[24];
+E4S board = E4S();
 
-//Relay
-Relay relay1 = Relay(Relay1Pin, serout);
+// Turn Relay 1 ON
+board.relay1.write(HIGH);
+// Turn Relay 1 OFF
+board.relay1.write(LOW);
 
-relay1.turnOn();
-relay1.turnOff();
-relay1.toggle();
+// Read Button 1 state
+bool pressed = board.button1.read();
 
-//Digtal Input
-DigitalIn sensor = DigitalIn(DigitalInputP0Pin);
+// Read Digital Input Positive 1 state
+bool state = board.digitalInputPositive1.read();
 
-bool enabled = sensor.readInput();
+// Turn on Buzzer for 1 second
+board.buzzer.buzz(1);
 
-// Button
-Button button = Button(DigitalDirectInput0Pin);
+// Turn on Digital Direct Output 1
+board.digitalDirectOutput1.write(HIGH);
 
-bool pressed = button.isPressed();
+// Use LCD
+board.lcd.begin();
+board.lcd.setCursor(0, 0);
+board.lcd.print("LCD");
 
-// 7 Segment Display
-Segment7 segment7 = Segment7(serout);
+// Turn White LED ON
+board.led.write(HIGH);
 
-segment7.number(9, 1);
-segment7.clear();
+// Turn RGB ON with color RGB(95, 181, 162)
+board.rgb.write(95, 181, 162);
 
-// Rgb 
-Rgb rgb = Rgb(serout);
-rgb.red();
-rgb.blue();
-rgb.green();
+// Display number 1 on the first digit of the 7 Segment Display
+board.segment7.displayNum(1, 1);
+
+// Display number 1, 2, 3, 4 on their respective digits with 1 second delay
+// between each digit
+board.segment7.displayNums(1, 2, 3, 4, 1);
+
+// Read temperature in celcius
+int temperature = board.temperature.readTemperatureC();
 
 ```
 

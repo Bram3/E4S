@@ -1,18 +1,14 @@
 #pragma once
 
-#include <Arduino.h>
-#include <Pins.h>
-class Relay
-{
-    bool *serout;
-    byte pin;
-    bool state;
-    void update();
+#include <ShiftRegister.h>
+
+class Relay {
+  ShiftRegister &mShiftRegister;
+  int mPin;
 
 public:
-    Relay(byte pin, bool *serout);
-    void turnOn();
-    void turnOff();
-    void toggle();
-    bool isOn();
+  Relay(ShiftRegister &shiftRegister, int pin);
+
+  void write(int state);
+  bool read();
 };

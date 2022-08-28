@@ -1,20 +1,19 @@
 #pragma once
 
+#define DEBOUNCE_DELAY 50
+
 #include <Arduino.h>
 
-class Button
-{
+class Button {
 
 private:
-    byte pin;
-    byte state;
-    byte lastReading;
-    unsigned long lastDebounceTime = 0;
-    unsigned long debounceDelay = 50;
+  int mPin;
+  int mState;
+  int mLastReading = 0;
+  unsigned long mLastDebounceTime = 0;
+  void updateReading();
 
 public:
-    Button(byte pin);
-    void update();
-    byte getState();
-    bool isPressed();
+  Button(int pin);
+  bool read();
 };

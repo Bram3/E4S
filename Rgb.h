@@ -1,15 +1,13 @@
 #pragma once
 
-#include <Pins.h>
 #include <Arduino.h>
-class Rgb
-{
-    bool *serout;
-    void update();
+#include <Pins.h>
+#include <ShiftRegister.h>
+
+class Rgb {
+  ShiftRegister &mShiftRegister;
 
 public:
-    Rgb(bool *serout);
-    void red();
-    void green();
-    void blue();
+  Rgb(ShiftRegister &shiftRegister);
+  void write(int red, int blue, int green);
 };
