@@ -2,8 +2,8 @@
 
 void Buzzer::buzz(int seconds) {
   unsigned long start = millis();
-  this->write(1);
+  this->writeDigital(1);
   while (millis() < start + seconds) {
   }
-  this->write(0);
+  this->writeDigital(0);
 }
