@@ -7,5 +7,6 @@ class SimpleOutput {
 
 public:
   SimpleOutput(int pin);
-  void write(int state);
+  void writeDigital(int state);
+  void writeAnalog(int value);
 };
